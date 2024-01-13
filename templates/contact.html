@@ -1,0 +1,81 @@
+{% extends 'commonheader.html' %}
+{% block content %}
+<br><br>
+                  <!-- ======= Contact Section ======= -->
+    <div id="contact" class="contact-area">
+      <div class="contact-inner area-padding">
+        <div class="contact-overly"></div>
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2>Contact us</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Start contact icon column -->
+            <div class="col-md-4">
+              <div class="contact-icon text-center">
+                <div class="single-icon">
+                  <i class="bi bi-phone"></i>
+                  <p>
+                    Call: +91 9886239083<br>
+                    <span>Monday-Friday (9am-5pm)</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Start contact icon column -->
+            <div class="col-md-4">
+              <div class="contact-icon text-center">
+                <div class="single-icon">
+                  <i class="bi bi-envelope"></i>
+                  <p>
+                    Email: medicalrecord@example.com<br>
+                    <span>Web: www.example.com</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Start contact icon column -->
+            <div class="col-md-4">
+              <div class="contact-icon text-center">
+                <div class="single-icon">
+                  <i class="bi bi-geo-alt"></i>
+                  <p>
+                    Location: Precedency College<br>
+                    <span>Bangalore 560010</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Start  contact -->
+            <div class="col-md-6">
+              <div class="form contact-form">
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="text-center"><button type="submit">Send Message</button></div>
+                </form>
+              </div>
+            </div>
+            <!-- End Left contact -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Contact Section -->
+
+{% endblock %}

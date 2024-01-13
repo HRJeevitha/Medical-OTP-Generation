@@ -1,0 +1,58 @@
+{% extends 'hospitalheader.html' %}
+{% block content %}
+<br><br>
+<h2>Hospital View Staffs Page</h2>
+<style type="text/css">
+    table,tr,th,td
+    {
+        font-name:arial;
+        border:1px solid black;
+        border-collapse:collapse;
+        width:100%;
+    }
+    th,td
+    {
+    width:200px;
+    height:50px;
+    text-align:center;
+    font-family:verdana;
+    }
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="well-middle">
+        <div class="single-well">
+            <p>
+                <table>
+    <thead>
+    <tr>
+        <th>Staff Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>EmailId</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+        <th>Qualification</th>
+        <th>Specialization</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in data %}
+    <tr>
+        <td>{{row.id}}</td>
+        <td>{{row.FirstName}}</td>
+        <td>{{row.LastName}}</td>
+        <td>{{row.EmailId}}</td>
+        <td>{{row.PhoneNumber}}</td>
+        <td>{{row.Address}}</td>
+        <td>{{row.Qualification}}</td>
+        <td>{{row.Specialization}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

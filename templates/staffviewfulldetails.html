@@ -1,0 +1,182 @@
+{% extends 'staffheader.html' %}
+{% block content %}
+<br><br>
+              <h2>Staff View Full Details Page</h2>
+<!--<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="well-left">
+              <div class="single-well">
+                <a href="#">
+                  <img src="/static/assets/img/Pic4.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+</div>-->
+<style type="text/css">
+table {
+	width: 50%;
+	color: black;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+tr, td, th {
+	border: 1px solid black;
+	font-size:16px;
+}
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="well-middle">
+              <div class="single-well">
+                  <table>
+                      <tr>
+                          <th>Staff Id : </th>
+                          <td>
+                              {{data['StaffId']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>First Name : </th>
+                          <td>
+                              {{data['StaffFirstName']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Last Name : </th>
+                          <td>
+                              {{data['StaffLastName']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Email Id : </th>
+                          <td>
+                              {{data['StaffEmailId']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Phone Number : </th>
+                          <td>
+                              {{data['StaffPhoneNumber']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Qualification : </th>
+                          <td>
+                              {{data['Qualification']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Specialization : </th>
+                          <td>
+                              {{data['Specialization']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Patient Id : </th>
+                          <td>
+                              {{data['PatientId']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Patient First Name : </th>
+                          <td>
+                              {{data['PatientFirstName']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Patient Last Name : </th>
+                          <td>
+                              {{data['PatientLastName']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Patient Email Id : </th>
+                          <td>
+                              {{data['PatientEmailId']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Patient Phone Number : </th>
+                          <td>
+                              {{data['PatientPhoneNumber']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Aadhar Number : </th>
+                          <td>
+                              {{aadharnum}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Patient Image : </th>
+                           <td><img src="/static/uploads/{{filename}}" alt="" width="200px"
+                           height="200px"></td>
+                      </tr>
+                      <tr>
+                          <th>Hospital Name : </th>
+                          <td>
+                              {{hospitalname}}
+                          </td>
+                      </tr>
+                      {% if data.Prescription1 %}
+                      <tr>
+                          <th>Prescription1 : </th>
+                           <td>{{data.Prescription1}}</td>
+                      </tr>
+                      {% endif %}
+
+                      {% if data.Prescription2 %}
+                      <tr>
+                          <th>Prescription2 : </th>
+                           <td>{{data.Prescription2}}</td>
+                      </tr>
+                      {% endif %}
+
+                      {% if data.Prescription3 %}
+                      <tr>
+                          <th>Prescription3 : </th>
+                           <td>{{data.Prescription3}}</td>
+                      </tr>
+                      {% endif %}
+
+                      {% if data.Prescription4 %}
+                      <tr>
+                          <th>Prescription4 : </th>
+                           <td>{{data.Prescription4}}</td>
+                      </tr>
+                      {% endif %}
+
+                      {% if data.Prescription5 %}
+                      <tr>
+                          <th>Prescription5 : </th>
+                           <td>{{data.Prescription5}}</td>
+                      </tr>
+                      {% endif %}
+
+
+                  </table>
+                <!--<ul>
+                  <li>
+                    <i class="bi bi-check"></i> Patient Demographics
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Financial Information
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Consent and Authorization Forms
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Release of information
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Treatment History
+                  </li>
+                </ul>-->
+              </div>
+            </div>
+          </div>
+
+{% endblock %}

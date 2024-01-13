@@ -1,0 +1,38 @@
+{% extends 'commonheader.html' %}
+{% block content %}
+<br><br>
+                  <!-- ======= Contact Section ======= -->
+    <div id="contact" class="contact-area">
+      <div class="contact-inner area-padding">
+        <div class="contact-overly"></div>
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2>Staff Enter OTP Page</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Start  contact -->
+            <div class="col-md-6">
+              <div class="form contact-form">
+                <form action="/staffcheckotppage" method="post" role="form">
+                  <div class="form-group">
+                    <input type="text" name="otp" class="form-control" id="uname" placeholder="Enter OTP" required
+                    maxlength="4">
+                  </div>
+                  <div class="text-center">
+                    <br>
+                  <button type="submit">Check OTP</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- End Left contact -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Contact Section -->
+
+{% endblock %}

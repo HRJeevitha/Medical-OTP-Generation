@@ -1,0 +1,39 @@
+{% extends 'commonheader.html' %}
+{% block content %}
+<br><br>
+                  <!-- ======= Contact Section ======= -->
+    <div id="contact" class="contact-area">
+      <div class="contact-inner area-padding">
+        <div class="contact-overly"></div>
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2>Hospital Login Page</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            {{msg}}
+            <div class="col-md-6">
+              <div class="form contact-form">
+                <form action="/hospitallogincheck" method="post" role="form">
+                  <div class="form-group">
+                    <input type="text" name="uname" class="form-control" id="uname" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Your Password" required>
+                  </div>
+                  <div class="text-center">
+                    <br>
+                    <button type="submit">Hospital Login</button></div>
+                </form>
+              </div>
+            </div>
+            <!-- End Left contact -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Contact Section -->
+
+{% endblock %}

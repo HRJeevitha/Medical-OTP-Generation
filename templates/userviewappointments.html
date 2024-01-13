@@ -1,0 +1,80 @@
+{% extends 'userheader.html' %}
+{% block content %}
+<br><br>
+<h2>User View Appointments Page</h2>
+<style type="text/css">
+    table,tr,th,td
+    {
+        font-name:arial;
+        border:1px solid black;
+        border-collapse:collapse;
+        width:100%;
+    }
+    th,td
+    {
+    width:200px;
+    height:50px;
+    text-align:center;
+    font-family:verdana;
+    }
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="well-middle">
+        <div class="single-well">
+            <p>
+            <table>
+                <thead>
+                <tr>
+        <th>Id</th>
+        <th>Staff Id</th>
+        <th>Staff First Name</th>
+        <th>Staff Last Name</th>
+        <th>Staff EmailId</th>
+        <th>Staff Phone Number</th>
+        <th>Staff Address</th>
+        <th>Qualification</th>
+        <th>Specialization</th>
+        <!--<th>Patient Id</th>
+        <th>Patient First Name</th>
+        <th>Patient Last Name</th>
+        <th>View Full Details</th>
+        <th>Patient EmailId</th>
+        <th>Patient Phone Number</th>
+        <th>Patient Address</th>-->
+        <th>Appointment Date</th>
+        <th>Appointment Time</th>
+        <th>Appointment Status</th>
+        <!--<th>View Description</th>-->
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in data %}
+    <tr>
+        <td>{{row.id}}</td>
+        <td>{{row.StaffId}}</td>
+        <td>{{row.StaffFirstName}}</td>
+        <td>{{row.StaffLastName}}</td>
+        <td>{{row.StaffEmailId}}</td>
+        <td>{{row.StaffPhoneNumber}}</td>
+        <td>{{row.StaffAddress}}</td>
+        <td>{{row.Qualification}}</td>
+        <td>{{row.Specialization}}</td>
+        <!--<td>{{row.PatientId}}</td>
+        <td>{{row.PatientFirstName}}</td>
+        <td>{{row.PatientLastName}}</td>
+        <td><a href="userviewdescriptions?id={{row.id}}">View Full Details</a></td>
+        <td>{{row.PatientEmailId}}</td>
+        <td>{{row.PatientPhoneNumber}}</td>
+        <td>{{row.PatientAddress}}</td>-->
+        <td>{{row.AppointmentDate}}</td>
+        <td>{{row.AppointmentTime}}</td>
+        <td>{{row.AppointmentStatus}}</td>
+    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

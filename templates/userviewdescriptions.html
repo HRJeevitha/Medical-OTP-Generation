@@ -1,0 +1,110 @@
+{% extends 'userheader.html' %}
+{% block content %}
+<br><br>
+<h2>User View Description Page</h2>
+<style type="text/css">
+    table,tr,th,td
+    {
+        font-name:arial;
+        border:1px solid black;
+        border-collapse:collapse;
+        width:100%;
+    }
+    th,td
+    {
+    width:200px;
+    height:50px;
+    text-align:center;
+    font-family:verdana;
+    }
+
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="well-middle">
+        <div class="single-well">
+            <p>
+            <table>
+                <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{row.id}}</td>
+                </tr>
+                <tr>
+                    <th>Staff Id</th>
+                    <td>{{row.StaffId}}</td>
+                </tr>
+                <tr>
+                    <th>Staff First Name</th>
+                    <td>{{row.StaffFirstName}}</td>
+                </tr>
+                <tr>
+                    <th>Staff Last Name</th>
+                    <td>{{row.StaffLastName}}</td>
+                </tr>
+                <tr>
+                    <th>Staff EmailId</th>
+                    <td>{{row.StaffEmailId}}</td>
+                </tr>
+                <tr>
+                    <th>Staff Phone Number</th>
+                    <td>{{row.StaffPhoneNumber}}</td>
+                </tr>
+                <tr>
+                    <th>Staff Address</th>
+                    <td>{{row.StaffAddress}}</td>
+                </tr>
+                <tr>
+                    <th>Qualification</th>
+                    <td>{{row.Qualification}}</td>
+                </tr>
+                <tr>
+                    <th>Specialization</th>
+                    <td>{{row.Specialization}}</td>
+                </tr>
+                <tr>
+                    <th>Patient Id</th>
+                    <td>{{row.PatientId}}</td>
+                </tr>
+                <tr>
+                    <th>Patient First Name</th>
+                    <td>{{row.PatientFirstName}}</td>
+                </tr>
+                <tr>
+                    <th>Patient Last Name</th>
+                    <td>{{row.PatientLastName}}</td>
+                </tr>
+                <tr>
+                    <th>Patient EmailId</th>
+                    <td>{{row.PatientEmailId}}</td>
+                </tr>
+                <tr>
+                    <th>Patient Phone Number</th>
+                    <td>{{row.PatientPhoneNumber}}</td>
+                </tr>
+                <tr>
+                    <th>Patient Address</th>
+                    <td>{{row.PatientAddress}}</td>
+                </tr>
+                <tr>
+                    <th>Appointment Date</th>
+                    <td>{{row.AppointmentDate}}</td>
+                </tr>
+                <tr>
+                    <th>Appointment Time</th>
+                    <td>{{row.AppointmentTime}}</td>
+                </tr>
+                <tr>
+                    <th>Dialysis</th>
+                    <td>{{row.Dialysis}}</td>
+                </tr>
+                <tr>
+                    <th>View Description</th>
+                    <td>{{row.Description}}</td>
+                </tr>
+                </tbody>
+            </table>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

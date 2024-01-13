@@ -1,0 +1,182 @@
+{% extends 'hospitalheader.html' %}
+{% block content %}
+<br><br>
+<style type="text/css">
+table {
+	width: 100%;
+	color: black;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+tr, td, th {
+	border: 1px solid black;
+	font-size:16px;
+}
+</style>
+<script type="text/javascript">
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    	alert("Please enter only numbers");
+        return false;
+    }
+    return true;
+}
+function isLetters(e, t)
+{
+   if (window.event)
+   {
+      var charCode = window.event.keyCode;
+   }
+   else if (e)
+   {
+      var charCode = e.which;
+   }
+   else { return true; }
+   if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+       return true;
+   else
+   {
+      alert("Please enter only alphabets");
+      return false;
+   }
+}
+</script>
+
+                  <!-- ======= Contact Section ======= -->
+    <div id="contact" class="contact-area">
+      <div class="contact-inner area-padding">
+        <div class="contact-overly"></div>
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2>Hospital Search Patient Prescription Page</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Start  contact -->
+            <div class="col-md-6">
+              <div class="form contact-form">
+                <form action="/hospitalsearchprescriptionpage_patientid" method="post" role="form" enctype="multipart/form-data">
+                  <h3>
+                  {{msg}}
+                  </h3>
+                  <div class="form-group mt-3">
+                    <input type="text" name="patientid" class="form-control" id="fname"
+                           placeholder="Patient Id" required maxlength="4">
+                  </div>
+                  <br>
+                  <div class="text-center"><button type="submit">Search Patient Details on Patient Id</button></div>
+                </form>
+
+                <form action="/hospitalsearchprescriptionpage_aadharnum" method="post" role="form" enctype="multipart/form-data">
+                  <h3>
+                  {{msg}}
+                  </h3>
+                  <div class="form-group mt-3">
+                    <input type="text" name="aadharnum" class="form-control" id="aadharnum"
+                           placeholder="Aadhar Number" required maxlength="12">
+                  </div>
+                  <br>
+                  <div class="text-center"><button type="submit">Search Patient Details on Aadhar Number</button></div>
+                </form>
+              </div>
+            </div>
+            <!-- End Left contact -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Contact Section -->
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="well-middle">
+        <div class="single-well">
+            <p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Staff Id</th>
+                    <th>Staff First Name</th>
+                    <th>Staff Last Name</th>
+                    <!--<th>Staff EmailId</th>
+                    <th>Staff Phone Number</th>
+                    <th>Staff Address</th>
+                    <th>Qualification</th>
+                    <th>Specialization</th>-->
+                    <th>Patient Id</th>
+                    <th>Patient First Name</th>
+                    <th>Patient Last Name</th>
+                    <!--<th>View Full Details</th>-->
+                    <!--<th>Patient EmailId</th>
+                    <th>Patient Phone Number</th>
+                    <th>Patient Address</th>-->
+                    <th>Appointment Date</th>
+                    <th>Appointment Time</th>
+                    <th>Dialysis</th>
+                    <th>Prescriptions</th>
+                    <th>View Full Details</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{row.id}}</td>
+                    <td>{{row.StaffId}}</td>
+                    <td>{{row.StaffFirstName}}</td>
+                    <td>{{row.StaffLastName}}</td>
+                    <!--<td>{{row.StaffEmailId}}</td>
+                    <td>{{row.StaffPhoneNumber}}</td>
+                    <td>{{row.StaffAddress}}</td>
+                    <td>{{row.Qualification}}</td>
+                    <td>{{row.Specialization}}</td>-->
+                    <!--<td>{{row.PatientId}}</td>
+                    <td>{{row.PatientFirstName}}</td>
+                    <td>{{row.PatientLastName}}</td>-->
+                    <!--<td><a href="userviewdescriptions?id={{row.id}}">View Full Details</a></td>-->
+                    <td>{{row.PatientId}}</td>
+                    <td>{{row.PatientFirstName}}</td>
+                    <td>{{row.PatientLastName}}</td>
+                    <td>{{row.AppointmentDate}}</td>
+                    <td>{{row.AppointmentTime}}</td>
+                    <td>{{row.Dialysis}}</td>
+                    <td style="width:300px;">
+                        {% if row.Prescription1 %}
+                        {{row.Prescription1}}
+                        {% endif %}
+                        {% if row.Prescription2 %}
+                        <br>
+                        {{row.Prescription2}}
+                        {% endif %}
+                        {% if row.Prescription3 %}
+                        <br>
+                        {{row.Prescription3}}
+                        {% endif %}
+                        {% if row.Prescription4 %}
+                        <br>
+                        {{row.Prescription4}}
+                        {% endif %}
+                        {% if row.Prescription5 %}
+                        <br>
+                        {{row.Prescription5}}
+                        {% endif %}
+                    </td>
+                    <!--<td><a href="staffaccept_rejectappointment?id={{row.id}}&status=Accepted">Accepted</a></td>-->
+                    <td><a href="hospitalviewfulldetails?id={{row.id}}">View Full Details</a></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

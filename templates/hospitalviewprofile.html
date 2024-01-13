@@ -1,0 +1,90 @@
+{% extends 'hospitalheader.html' %}
+{% block content %}
+<br><br>
+              <h2>About Patient Medical Record</h2>
+<!--<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="well-left">
+              <div class="single-well">
+                <a href="#">
+                  <img src="/static/assets/img/Pic4.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+</div>-->
+<style type="text/css">
+table {
+	width: 50%;
+	color: black;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+tr, td, th {
+	border: 1px solid black;
+	font-size:16px;
+}
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="well-middle">
+              <div class="single-well">
+                <p>
+ Medical records were traditionally kept in paper form, with tabs separating the sections. As printed reports were generated, they were moved to the correct tab. With the advent of the electronic patient record, these sections may still be found but as tabs or menus within the electronic record.
+                </p>
+                  <table>
+                      <tr>
+                          <th>Hospital Id : </th>
+                          <td>
+                              {{data['HospitalId']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Hospital Name : </th>
+                          <td>
+                              {{data['HospitalName']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Email Id : </th>
+                          <td>
+                              {{data['EmailId']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Phone Number : </th>
+                          <td>
+                              {{data['PhoneNumber']}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Address : </th>
+                          <td>
+                              {{data['Address']}}
+                          </td>
+                      </tr>
+                  </table>
+                <!--<ul>
+                  <li>
+                    <i class="bi bi-check"></i> Patient Demographics
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Financial Information
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Consent and Authorization Forms
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Release of information
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Treatment History
+                  </li>
+                </ul>-->
+              </div>
+            </div>
+          </div>
+
+{% endblock %}

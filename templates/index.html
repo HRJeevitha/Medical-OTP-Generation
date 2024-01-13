@@ -1,0 +1,53 @@
+{% extends 'commonheader.html' %}
+{% block content %}
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active" style="background-image: url('/static/assets/img/Pic1.jpg')">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Patient Medical Record</h2>
+                <p class="animate__animated animate__fadeInUp">A medical record is systematic documentation of a patient's medical history and care. It usually contains the patient's health information (PHI) which includes identification information, health history, medical examination findings, and Medical billing information.</p>
+                <!--<a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url('/static/assets/img/Pic2.jpg')">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Patient Medical Record</h2>
+                <p class="animate__animated animate__fadeInUp">How you make your request will depend on your provider's processes. You may be able to request your record through your provider's patient portal. You may have to fill out a form — called a health or medical record release form, or request for access—send an email, or mail or fax a letter to your provider.</p>
+                <!--<a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url('/static/assets/img/Pic3.jpg')">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Patient Medical Record</h2>
+                <p class="animate__animated animate__fadeInUp">A record of information about a person's health. A personal medical history may include information about allergies, illnesses, surgeries, immunizations, and results of physical exams and tests.</p>
+                <!--<a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>-->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'commonheader.html' %}
+{% block content %}
+<br><br>
+
+<script type="text/javascript">
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    	alert("Please enter only numbers");
+        return false;
+    }
+    return true;
+}
+function isLetters(e, t)
+{
+   if (window.event)
+   {
+      var charCode = window.event.keyCode;
+   }
+   else if (e)
+   {
+      var charCode = e.which;
+   }
+   else { return true; }
+   if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+       return true;
+   else
+   {
+      alert("Please enter only alphabets");
+      return false;
+   }
+}
+</script>
+
+                  <!-- ======= Contact Section ======= -->
+    <div id="contact" class="contact-area">
+      <div class="contact-inner area-padding">
+        <div class="contact-overly"></div>
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2>New User Page</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Start  contact -->
+            <div class="col-md-6">
+              <div class="form contact-form">
+                <form action="/addnewuser" method="post" role="form" enctype="multipart/form-data">
+                  <h3>
+                  {{msg}}
+                  </h3>
+                  <div class="form-group mt-3">
+                    <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name" required
+                    onkeypress="return isLetters(event,this);">
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name" required
+                    onkeypress="return isLetters(event,this);">
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" name="uname" class="form-control" id="uname" placeholder="User Name" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Password" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="email" class="form-control" name="emailid" id="emailid" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="Phone Number" required
+                    maxlength="10" onkeypress="return isNumber(event,this);">
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="file" class="form-control" name="file" id="file" placeholder="Upload Aadhar Number" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="aadhar" class="form-control" name="aadhar" id="aadhar" placeholder="Enter Aadhar Number" required
+                    maxlength="12" onkeypress="return isNumber(event,this);">
+                  </div>
+                  <div class="form-group mt-3">
+                    <textarea class="form-control" name="address" rows="5" placeholder="Address" required></textarea>
+                  </div>
+                  <br>
+                  <div class="text-center"><button type="submit">New User</button></div>
+                </form>
+              </div>
+            </div>
+            <!-- End Left contact -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Contact Section -->
+
+{% endblock %}

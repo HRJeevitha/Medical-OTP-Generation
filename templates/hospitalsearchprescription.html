@@ -1,0 +1,83 @@
+{% extends 'hospitalheader.html' %}
+{% block content %}
+<br><br>
+
+<script type="text/javascript">
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    	alert("Please enter only numbers");
+        return false;
+    }
+    return true;
+}
+function isLetters(e, t)
+{
+   if (window.event)
+   {
+      var charCode = window.event.keyCode;
+   }
+   else if (e)
+   {
+      var charCode = e.which;
+   }
+   else { return true; }
+   if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+       return true;
+   else
+   {
+      alert("Please enter only alphabets");
+      return false;
+   }
+}
+</script>
+
+                  <!-- ======= Contact Section ======= -->
+    <div id="contact" class="contact-area">
+      <div class="contact-inner area-padding">
+        <div class="contact-overly"></div>
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2>Hospital Search Patient Prescription Page</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Start  contact -->
+            <div class="col-md-6">
+              <div class="form contact-form">
+                <form action="/hospitalsearchprescriptionpage_patientid" method="post" role="form" enctype="multipart/form-data">
+                  <h3>
+                  {{msg}}
+                  </h3>
+                  <div class="form-group mt-3">
+                    <input type="text" name="patientid" class="form-control" id="fname"
+                           placeholder="Patient Id" required maxlength="4">
+                  </div>
+                  <br>
+                  <div class="text-center"><button type="submit">Search Patient Details on Patient Id</button></div>
+                </form>
+
+                <form action="/hospitalsearchprescriptionpage_aadharnum" method="post" role="form" enctype="multipart/form-data">
+                  <h3>
+                  {{msg}}
+                  </h3>
+                  <div class="form-group mt-3">
+                    <input type="text" name="aadharnum" class="form-control" id="aadharnum"
+                           placeholder="Aadhar Number" required maxlength="12">
+                  </div>
+                  <br>
+                  <div class="text-center"><button type="submit">Search Patient Details on Aadhar Number</button></div>
+                </form>
+              </div>
+            </div>
+            <!-- End Left contact -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Contact Section -->
+
+{% endblock %}

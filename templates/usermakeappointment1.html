@@ -1,0 +1,113 @@
+{% extends 'userheader.html' %}
+{% block content %}
+<br><br>
+<h2>User Make Appointment Page</h2>
+<style type="text/css">
+    table,tr,th,td
+    {
+        font-name:arial;
+        border:1px solid black;
+        border-collapse:collapse;
+        width:100%;
+    }
+    th,td
+    {
+    width:200px;
+    height:50px;
+    text-align:center;
+    font-family:verdana;
+    }
+
+
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="well-middle">
+        <div class="single-well">
+            <p>
+            <form action="/addnewappointment" method="post" role="form">
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>Staff Id
+                        <td><input type="text" name="staffid" value="{{data['id']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>First Name</th>
+                        <td><input type="text" name="stafffirstname" value="{{data['FirstName']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>Last Name</th>
+                        <td><input type="text" name="stafflastname" value="{{data['LastName']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>EmailId</th>
+                        <td><input type="text" name="staffemailid" value="{{data['EmailId']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>Phone Number</th>
+                        <td><input type="text" name="staffphonenumber" value="{{data['PhoneNumber']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td><input type="text" name="staffaddress" value="{{data['Address']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>Qualification</th>
+                        <td><input type="text" name="qualification" value="{{data['Qualification']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>Specialization</th>
+                        <td><input type="text" name="specialization" value="{{data['Specialization']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>HospitalId</th>
+                        <td><input type="text" name="hospitalid" value="{{data['HospitalId']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>Patient Id</th>
+                        <td><input type="text" name="patid" value="{{userdata['id']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>FirstName</th>
+                        <td><input type="text" name="patfirstname" value="{{userdata['FirstName']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>LastName</th>
+                        <td><input type="text" name="patlastname" value="{{userdata['LastName']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>EmailId</th>
+                        <td><input type="text" name="patemailid" value="{{userdata['EmailId']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>PhoneNumber</th>
+                        <td><input type="text" name="patphonenumber" value="{{userdata['PhoneNumber']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td><input type="text" name="pataddress" value="{{userdata['Address']}}" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>Dialysis</th>
+                        <td><input type="text" name="dialysis" required></td>
+                    </tr>
+                    <tr>
+                        <th>Appointment Date</th>
+                        <td><input type="date" name="appdate" min="{{today}}" required></td>
+                    </tr>
+                    <tr>
+                        <th>Appointment Time</th>
+                        <td><input type="time" name="apptime" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Make Appointment"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
